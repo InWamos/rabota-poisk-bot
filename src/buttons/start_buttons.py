@@ -2,7 +2,7 @@ from aiogram.types.inline_keyboard_markup import InlineKeyboardMarkup
 from aiogram.types import InlineKeyboardButton
 
 
-start_button_makrup = InlineKeyboardMarkup(
+start_button_markup = InlineKeyboardMarkup(
     inline_keyboard=[
         [
             InlineKeyboardButton(text="📊Подбор вакансий",callback_data="chats_list"),
