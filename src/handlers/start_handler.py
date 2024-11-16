@@ -8,13 +8,8 @@ router = Router()
 
 @router.message(CommandStart())
 async def respond_to_start_commant(message: Message) -> None:
-    await message.reply_photo(
+    await message.answer_photo(
         photo="AgACAgIAAxkBAAMpZzfojI-6s3bMcB5w016YB3yJMQ0AAqHvMRuw5LlJdYueJXgY_jMBAAMCAANzAAM2BA",
         caption="💼 Наш проект поможет найти вакансию по твоему запросу а также предоставит инструмент для карьерного роста и заработной платы📈",
-        reply_markup=start_button_markup
+        reply_markup=start_button_markup,
     )
-
-
-@router.message()
-async def phooto(message: Message):
-    print(message)
