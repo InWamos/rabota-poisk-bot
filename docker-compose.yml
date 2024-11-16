@@ -1,6 +1,6 @@
 services:
 
-  anonchat-telegram:
+  rabota-poisk-tg:
     build:
       context: .
     restart: on-failure
