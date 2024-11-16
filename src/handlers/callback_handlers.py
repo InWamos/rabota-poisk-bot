@@ -16,6 +16,7 @@ async def return_chats_list(callback: types.CallbackQuery) -> None:
 
 @callback_router.callback_query(F.data == "place_ad")
 async def return_chats_list(callback: types.CallbackQuery) -> None:
-    await callback.message.reply(
+
+    await callback.message.answer(
         text="Для размещения вакансии свяжитесь с менеджером @BEATNGO с пометкой #РЕКЛАМА"
     )
