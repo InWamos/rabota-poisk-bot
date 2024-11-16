@@ -4,6 +4,7 @@ import logging
 import sys
 
 from handlers.start_handler import router
+from handlers.callback_handlers import callback_router
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
 
@@ -14,6 +15,7 @@ async def main() -> None:
     bot = Bot(token=bot_token)
     dp = Dispatcher()
     dp.include_router(router=router)
+    dp.include_router(router=callback_router)
     await dp.start_polling(bot)
 
 
