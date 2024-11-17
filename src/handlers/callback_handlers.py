@@ -1,5 +1,8 @@
+import os
 from aiogram import Router, F, types
 from buttons.start_buttons import chats_button_markup, start_button_markup
+
+MANAGER_NICKNAME = os.getenv("MANAGER_NICKNAME")
 
 callback_router = Router()
 
@@ -18,5 +21,5 @@ async def return_chats_list(callback: types.CallbackQuery) -> None:
 async def return_chats_list(callback: types.CallbackQuery) -> None:
 
     await callback.message.answer(
-        text="Для размещения вакансии свяжитесь с менеджером @BEATNGO с пометкой #РЕКЛАМА"
+        text=f"Для размещения вакансии свяжитесь с менеджером {MANAGER_NICKNAME} с пометкой #РЕКЛАМА"
     )

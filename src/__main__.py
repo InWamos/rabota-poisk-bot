@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 
 
 async def main() -> None:
-    load_dotenv()
     bot_token = os.getenv("BOT_TOKEN")
     bot = Bot(token=bot_token)
     dp = Dispatcher()
@@ -20,5 +19,6 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
+    load_dotenv()
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
