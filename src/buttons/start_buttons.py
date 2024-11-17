@@ -1,11 +1,13 @@
+import os
 from aiogram.types.inline_keyboard_markup import InlineKeyboardMarkup
 from aiogram.types import InlineKeyboardButton
 
+INSTRUMENT_LINK = os.getenv("INSTRUMENT_LINK")
 
 start_button_markup = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="📊Подбор вакансий", callback_data="chats_list")],
-        [InlineKeyboardButton(text="📈Инструмент", url="https://t.me/Jobs_bridge")],
+        [InlineKeyboardButton(text="📈Инструмент", url=INSTRUMENT_LINK)],
         [
             InlineKeyboardButton(
                 text="Разместить свою вакансию", callback_data="place_ad"
@@ -33,10 +35,6 @@ chats_button_markup = InlineKeyboardMarkup(
                 text="Работа Онлайн", url="https://t.me/rabota_online_desk"
             ),
         ],
-        [
-            InlineKeyboardButton(
-                text="<-- Назад", callback_data="back_to_main"
-            )
-        ]
+        [InlineKeyboardButton(text="<-- Назад", callback_data="back_to_main")],
     ]
 )
