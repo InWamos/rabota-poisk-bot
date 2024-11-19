@@ -1,12 +1,12 @@
-from abc import ABC, abstractmethod
 import datetime
+from abc import ABC, abstractmethod
 
 
 class DatabaseMethods(ABC):
     @abstractmethod
-    def increment_counter(self) -> None:
+    def add_user(self, user_id: int, date_added: datetime.datetime) -> None:
         pass
 
     @abstractmethod
-    def add_user(self, user_id: int, date_added: datetime.datetime) -> None:
+    def get_users_amount(self) -> int:
         pass
