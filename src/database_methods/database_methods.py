@@ -11,5 +11,5 @@ class DatabaseMethods(ABC):
         pass
 
     @abstractmethod
-    def set_user_banned(self) -> None:
+    def set_user_banned(self, user_id: int) -> None:
         pass
