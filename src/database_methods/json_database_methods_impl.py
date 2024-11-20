@@ -13,7 +13,7 @@ class JsonDatabaseMethodsImpl(DatabaseMethods):
 
         if not user_id in table.keys():
             user: dict[str, Any] = {
-                "date": datetime.datetime.now(),
+                "date": datetime.datetime.now().isoformat(),
                 "isBanned": False,
             }
             table[user_id] = user
