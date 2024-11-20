@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class DatabaseMethods(ABC):
     @abstractmethod
-    def add_user(self, user_id: int) -> None:
+    def add_user(self, user_id: str) -> None:
         pass
 
     @abstractmethod
@@ -11,9 +11,9 @@ class DatabaseMethods(ABC):
         pass
 
     @abstractmethod
-    def set_user_banned(self, user_id: int) -> None:
+    def set_user_banned(self, user_id: str) -> None:
         pass
     
     @abstractmethod
-    def get_all_users(self) -> list[int]:
+    def get_all_users(self) -> list[str]:
         pass
