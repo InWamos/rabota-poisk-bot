@@ -29,6 +29,10 @@ class JsonDatabaseMethodsImpl(DatabaseMethods):
         table[user_id]["isBanned"] = True
         self._write_json_data(table=table)
 
+    def get_all_users(self) -> list[int]:
+        table: dict[int, dict[str, Any]] = self._get_json_data()
+        return list(table.keys())
+
     def _get_json_data(self) -> dict[int, dict[str, Any]]:
         with open(file=self.PATH_TO_DB, mode="r") as json_file:
             return json.load(json_file)
