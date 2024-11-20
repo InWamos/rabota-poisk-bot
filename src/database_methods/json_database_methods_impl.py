@@ -2,7 +2,7 @@ import datetime
 import json
 
 from typing import Any
-from src.database_methods.database_methods import DatabaseMethods
+from database_methods.database_methods import DatabaseMethods
 
 
 class JsonDatabaseMethodsImpl(DatabaseMethods):
@@ -39,4 +39,4 @@ class JsonDatabaseMethodsImpl(DatabaseMethods):
 
     def _write_json_data(self, table: dict[str, dict[str, Any]]) -> None:
         with open(self.PATH_TO_DB, "w") as json_file:
-            json.dump(table, json_file)
+            json.dump(table, json_file, indent=4)
